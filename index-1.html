@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>NATU EDGE – KHUMO EDITION</title>
+<style>
+:root{color-scheme:dark;--bg:#07111f;--panel:#101e30;--line:#263b55;--muted:#9db0c7;--green:#36d399;--gold:#f6c85f}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#07111f,#0d1b2d);font:16px system-ui,Arial;color:#f4f7fb}
+main{max-width:720px;margin:auto;padding:22px 16px 40px}.brand{font-size:12px;letter-spacing:3px;color:var(--green);font-weight:800}
+h1{font-size:27px;margin:8px 0 4px}.sub{color:var(--muted);margin:0 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px;margin:13px 0;box-shadow:0 10px 28px #0003}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.label{font-size:13px;color:var(--muted)}
+.pill{border-radius:30px;padding:6px 11px;background:#173d36;color:var(--green);font-size:12px;font-weight:700}
+.big{font-size:25px;font-weight:800;margin:8px 0}.muted{color:var(--muted);font-size:13px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{font-size:22px;font-weight:750;margin-top:7px}
+button{border:0;border-radius:12px;background:var(--green);color:#062018;font-weight:800;padding:13px 16px;font-size:15px;width:100%;margin-top:12px}
+button.secondary{background:#263b55;color:#fff}
+.notice{border-left:3px solid var(--gold);padding:10px 12px;background:#2a281d;border-radius:7px;color:#f7e7b7;font-size:13px;line-height:1.5}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:24px}
+</style>
+</head>
+<body><main>
+<div class="brand">NATU EDGE</div>
+<h1>KHUMO EDITION</h1>
+<p class="sub">Forex signal dashboard</p>
+
+<section class="card">
+ <div class="row"><span class="label">ROBOT STATUS</span><span class="pill">DASHBOARD READY</span></div>
+ <div class="big">Signal-only mode</div>
+ <p class="muted">This dashboard displays information for manual review. It does not connect to a broker or place trades.</p>
+</section>
+
+<div class="grid">
+ <section class="card"><div class="label">CURRENT SIGNAL</div><div class="metric" id="signal">WAIT</div><div class="muted">No verified live market feed</div></section>
+ <section class="card"><div class="label">TRADING MODE</div><div class="metric">DEMO</div><div class="muted">Practice only</div></section>
+</div>
+
+<section class="card">
+ <div class="label">MARKET WATCH</div>
+ <div class="row" style="margin-top:12px"><b>EUR/USD</b><span class="pill">Awaiting data</span></div>
+ <div class="row" style="margin-top:15px"><b>GBP/USD</b><span class="pill">Awaiting data</span></div>
+ <div class="row" style="margin-top:15px"><b>USD/JPY</b><span class="pill">Awaiting data</span></div>
+ <button class="secondary" onclick="document.getElementById('updated').textContent=new Date().toLocaleString()">Update check time</button>
+ <p class="muted">Last checked: <span id="updated">Not checked yet</span></p>
+</section>
+
+<section class="card">
+ <div class="label">HOW TO USE</div>
+ <p class="muted">1. Open your broker's demo account separately.<br>2. Check market conditions and indicators there.<br>3. Treat this page as a dashboard only; never trade from an unverified signal.</p>
+ <div class="notice">Forex trading involves risk. This app currently has no live price feed, predictive model, or automatic trading connection. Do not deposit money based on this dashboard.</div>
+</section>
+<footer>NATU EDGE – KHUMO EDITION · Free starter dashboard</footer>
+</main></body></html>
